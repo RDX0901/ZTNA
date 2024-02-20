@@ -6,22 +6,28 @@ Steps to Start the Program:
 1. Setup Database:
     Ensure you have SQLite installed.
     Run the db_setup.py script to create the database and populate it with initial data, including an admin user.
+
 2.Start the Application:
     Run the app.py script to start the Flask application.
     The application will start running on http://localhost:5000.
+
 3.Access the Application:
     Open a web browser and go to http://localhost:5000 to access the application.
+
 4.Register an Admin User:
     Click on the "Register" link on the home page.
     Enter a username, password, and the admin secret key (12345 in this case).
     Select the resources the user should have access to.
     Click "Register" to create the admin user.
+
 5.Login as Admin:
     Enter the admin username and password on the login page.
     If successful, you will be redirected to the admin dashboard, where you can manage users and resources.
+
 6.Manage Users and Resources:
     From the admin dashboard, you can add new users, remove users, and view user details.
     You can also access resources based on your role and permissions.
+
 7.Logout:
     Click on the "Logout" link to logout from the application.
 
