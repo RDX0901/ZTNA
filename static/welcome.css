@@ -1,0 +1,22 @@
+/* welcome.css */
+
+/* Style the welcome message */
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Style the login button */
+a.login-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+a.login-button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>User Management</title>
+</head>
+<body>
+    <h1>User Management (Admin)</h1>
+    <h2>Active Sessions: {{active_sessions|length}} </h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Session ID</th>
+                <th>Username</th>
+                            </tr>
+        </thead>
+        <tbody>
+            {% for session_id, session_info in active_sessions.items() if session_id != 'count' %}
+                <tr>
+                    <td>{{ session_id }}</td>
+                    <td>{{ session_info['username'] }}</td>
+                                    </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p><a href="/user_deletion">User Deletion</a></p>
+    <p><a href="/admin_dashboard">Back to Admin Dashboard</a></p>
+</body>
+</html>

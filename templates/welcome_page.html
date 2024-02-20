@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <style>
+        /* Reset default margin and padding */
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Center the form vertically and horizontally */
+        .center-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+        }
+
+        /* Style the form elements */
+        form {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        /* Style label and input elements */
+        label, input {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%; /* Make them span the full width of the form */
+        }
+
+        /* Style the submit button */
+        button {
+            background-color: #ccc;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="center-form">
+        <h1>Welcome to the Website</h1>
+
+        <!-- Check if the user is logged in -->
+        {% if 'username' in session %}
+            <p>You are logged in as {{ session['username'] }}</p>
+        {% else %}
+            <!-- If not logged in, show a login form -->
+            <form action="/login" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        {% endif %}
+    </div>
+</body>
+</html>

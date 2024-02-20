@@ -1,0 +1,13 @@
+<ul>
+    <li><a href="/user_management">User Management</a></li>
+    <li><a href="/register">Register</a></li>
+    <li><a href="/settings">Admin Settings</a></li>
+    <li><a href="/logout">Logout</a></li>
+    <!-- <p><a href="/admin_dashboard">Back to Admin Dashboard</a></p> -->
+    <h2>User List:</h2>
+    <ul>
+        {% for user in users %}
+            <li><a href="/admin_chat?user={{ user.username }}">Chat with {{ user.username }}</a></li>
+        {% endfor %}
+    </ul>
+</ul>

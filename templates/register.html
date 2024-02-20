@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Registration</title>
+</head>
+<body>
+    <h2>User Registration</h2>
+    <form method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="secret_key">Admin Secret Key:</label>
+        <input type="text" id="secret_key" name="secret_key"><br><br>
+
+        <label>Select Resources:</label><br>
+
+        <input type="checkbox" id="resource1" name="resources[]" value="Resource 1">
+        <label for="resource1">Resource 1</label><br>
+
+        <input type="checkbox" id="resource2" name="resources[]" value="Resource 2">
+        <label for="resource2">Resource 2</label><br>
+
+        <input type="checkbox" id="resource3" name="resources[]" value="Resource 3">
+        <label for="resource3">Resource 3</label><br>
+
+        <!-- Add more checkbox options as needed -->
+
+        <br><br>
+        <input type="submit" value="Register">
+    </form>
+    <p><a href="/admin_dashboard">Back to Admin Dashboard</a></p>
+</body>
+</html>
